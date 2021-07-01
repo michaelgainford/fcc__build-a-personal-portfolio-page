@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+:root {
+  --ff: Oswald, sans-serif;
+  --ff__light: 300;
+  --fw__medium: 400;
+  --fw__bold: 700;
+  --blue: #26547c;
+  --pink: #ef476f;
+  --pink__dark: #db3b60;
+  --yellow: #ffd166;
+  --green: #06d6a0;
+  --white: #fffcf9;
+}
+
+body {
+  font-family: var(--ff);
+}
+.container {
+  min-height: 100vh;
+  width: 100;
+  > * {
+    width: 100%;
+  }
+}
+
+#navbar {
+  background-color: var(--pink);
+  display: flex;
+  justify-content: flex-end;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    li {
+      list-style: none;
+      a {
+        align-items: center;
+        color: var(--white);
+        display: flex;
+        font-size: 1.2rem;
+        font-weight: var(--fw__bold);
+        justify-content: center;
+        letter-spacing: 0.1rem;
+        padding: 2rem 3rem;
+        text-decoration: none;
+        transition: background-color 1s;
+        &:hover {
+          background-color: var(--pink__dark);
+        }
+      }
+    }
+  }
+}
+
+#welcome-section {
+  align-items: center;
+  background-color: var(--blue);
+  color: var(--white);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  @media (min-width: 50em) {
+    padding: 0 5rem;
+  }
+  h1 {
+    font-size: 4rem;
+    line-height: 7.2rem;
+    letter-spacing: 0.25rem;
+    padding-top: 1rem;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(13, 13, 13, 1);
+    text-transform: uppercase;
+    .welcome {
+      display: block;
+    }
+  }
+}
+
+#projects-section {
+  align-items: center;
+  background-color: var(--pink);
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+}
